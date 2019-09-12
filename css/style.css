@@ -1,0 +1,307 @@
+body{
+    background-color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: darkslategrey;
+    width: 100vw;
+}
+
+img{
+    max-width: 400px;
+    max-height: auto;
+    object-fit: contain;
+}
+
+.smoothies{
+    padding: 1rem 1rem 0 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Playfair Display', serif;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+header i.material-icons{
+    font-size: 2rem;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    position: fixed;
+    right: 0;
+    background-color: white;
+    height: 100vh;
+    width: 80vw;
+    z-index: 2;
+    transition: right 0.25s ease-out;
+}
+/* Tidigare menu-hidden */
+.menu{
+    right: -100vw;
+    
+}
+
+.hidden{
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.fade-layer{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.menu-items{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+li{
+    margin: 0 2rem;
+}
+
+li a{
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+li a:hover{
+    font-size: larger;
+    text-decoration: underline;
+}
+
+
+a{
+    text-decoration: none;
+    color: darkslategrey;
+}
+
+.wrapper{
+    /* width: 100vw; */
+    display: grid;
+    gap: 0.7rem;
+    box-sizing: border-box;
+
+}
+
+.card{
+    max-width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 1rem;
+    grid-area: card;
+    -webkit-box-shadow: 1px 15px 21px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 15px 21px -5px rgba(0,0,0,0.75);
+    box-shadow: 1px 15px 21px -5px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.card div{
+    width: 100%;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+.greybgcard{
+    background-color: rgb(233, 232, 232);
+    display: flex;
+}
+
+.greybgcard div{
+    background-color: white;
+    margin: 1rem;
+    padding: 1.5rem;
+    -webkit-box-shadow: 0px 11px 18px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 11px 18px -12px rgba(0,0,0,0.75);
+    box-shadow: 0px 11px 18px -12px rgba(0,0,0,0.75);
+}
+
+.pageheading{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkslategrey;
+    background-color: white;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.pagebox{
+    background-image: url(/img/raspberrysmoothie@400x400.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pagebox-strawbry{
+    background-image: url(/img/strawberrysmoothie@400x400.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    max-width: 100vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.whitepageboxheading{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 0;
+}
+
+.whitepageboxtext{
+    background-color: white;
+    padding: 1rem;
+    max-width: 100vw;
+}
+
+
+
+@media only screen and (min-device-width: 1224px){
+
+    header i.material-icons{
+        display: none;
+    }
+
+    nav{
+        position: static;
+        height: auto;
+        width: auto;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-around; */
+    }
+
+    .menu-items{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: space-around;
+    }
+
+    .smoothies{
+        width: 90vw;
+        min-height: 400px;
+        padding: 2rem;
+        margin: auto;
+        background-image: url(/img/smoothies-dark@1500x508.jpg);
+        background-repeat: no-repeat;
+    }
+
+    h1{
+        font-size: 70px;
+        font-weight: bold;
+        color: white;
+        
+    }
+
+    .pageheading{
+        font-size: 40px;
+        font-weight: bold;
+        color: darkslategrey;
+        background-color: white;
+        padding: 0.8rem 1.5rem;
+        margin: 0;
+    }
+
+    .pagebox{
+        background: url(/img/raspberrysmoothie@1500x886.jpg);
+        background-repeat: no-repeat;
+        width: 90vw;
+        margin: 0 auto;
+        display: grid;
+        align-items: unset;
+        justify-content: unset;
+        grid-template-rows: 500px auto auto;
+        grid-template-columns: 15% 1fr auto 1fr 15%;
+    }
+
+    .pagebox-strawbry{
+        background: url(/img/strawberrysmoothie@1500x964.jpg);
+        background-repeat: no-repeat;
+        width: 90vw;
+        margin: 0 auto;
+        display: grid;
+        align-items: unset;
+        justify-content: unset;
+        grid-template-rows: 500px auto auto;
+        grid-template-columns: 15% 1fr auto 1fr 15%;
+    }
+
+    .whitepageboxheading{
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .whitepageboxtext{
+        background-color: white;
+        grid-column: 2 / span 3;
+        grid-row: 2 / span 2;
+        justify-self: center;
+        line-height: 1.5;
+        padding: 1.5rem;
+        -webkit-box-shadow: 1px 15px 14px -8px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 15px 14px -8px rgba(0,0,0,0.75);
+        box-shadow: 1px 15px 14px -8px rgba(0,0,0,0.75);
+    }
+
+    .wrapper{
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "card card side"
+        "card card side";
+        gap: 1rem;
+    }
+
+    .greybgcard{
+        grid-area: side;
+        flex: 1;
+    }
+
+    .lowersection{
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+    }
+}
