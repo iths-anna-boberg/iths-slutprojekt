@@ -240,8 +240,10 @@ a{
 }
 
 .ingredients-nav{
+    position: unset;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     justify-content: space-around;
     align-items: center;
 }
@@ -443,5 +445,13 @@ a{
 
     .recipe-suggestions p a:hover{
         text-decoration: underline;
+    }
+
+    .ingredients-nav{
+        position: unset;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
 }
