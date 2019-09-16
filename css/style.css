@@ -268,16 +268,17 @@ a{
 .ingredients-nav{
     position: unset;
     display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    justify-content: space-around;
-    align-items: center;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 .ingredients-nav a{
     background-color: rgb(209, 212, 214);
     border-radius: 1.5rem;
     padding: 0.4rem 1rem;
+    margin: 0.5rem;
     /* -webkit-box-shadow: 1px 15px 14px -8px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 15px 14px -8px rgba(0,0,0,0.75);
     box-shadow: 1px 15px 14px -8px rgba(0,0,0,0.75); */
